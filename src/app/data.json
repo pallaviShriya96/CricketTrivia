@@ -1,0 +1,27 @@
+    [
+        {
+            "id": "2001",
+            "title":"When was the last time India won the Cricket World Cup?",
+            "options":[2006,2003,2004,2005],
+            "correctOption":2003
+        },
+        {
+            "id": "2002",
+            "title":"What is the hightest individual score by a batsman in Test Cricket?",
+            "options":[355,425,375,320],
+            "correctOption":2003
+        },
+        {
+            "id": "2003",
+            "title":"Who has won the most number of cricket world Cups?",
+            "options":["Australia","South Africa","England","India"],
+            "correctOption":"Australia"
+        },
+        {
+            "id": "2004",
+            "title":"How many innternational centuries does Sachin Tendulkar has under his name?",
+            "options":[55,49,54,45],
+            "correctOption":49
+        }
+    ]
+    

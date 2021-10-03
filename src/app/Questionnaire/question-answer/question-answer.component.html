@@ -1,0 +1,31 @@
+<div>
+    <div class="header"> CRICKET TRIVIA</div>
+    <!-- Form Section -->
+    <div class="question-form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form" *ngFor="let question of questions;index as i;">
+                <div class="question-box">
+                    <div class="question">{{i+1}}. {{question.title}}</div>
+                    <select [formControlName]="question.id" class="option-dropdown">
+                        <option value="default">----</option>
+                        <option *ngFor="let option of question.options" [value]="option">
+                            {{option}}
+                        </option>
+                    </select>
+                    <p class="wrong-answer" *ngIf="incorrectAnswersIndex.includes(i)"> Wrong Answer !!</p>
+                </div>
+            </div>
+            <div class="button-section">
+                <button class="buttons">Submit</button>
+                <button class="buttons" type="button" (click)="clearValues()">Clear Values</button>
+            </div>
+        </form>
+    </div>
+    <!-- Graph Section -->
+    <div class="graph-div" *ngIf="showGraph">
+        <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="graphData" [gradient]="gradient"
+            [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel">
+        </ngx-charts-bar-vertical>
+    </div>
+</div>
